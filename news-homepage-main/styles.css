@@ -1,0 +1,247 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --clr-softOrange: hsl(35, 77%, 62%);
+    --clr-softRed: hsl(5, 85%, 63%);
+    --clr-offWhite: hsl(36, 100%, 99%);
+    --clr-grayishBlue: hsl(233, 8%, 79%);
+    --clr-darkGrayishBlue: hsl(236, 13%, 42%);
+    --clr-veryDarkBlue: hsl(240, 100%, 5%);
+}
+
+body {
+    font-size: 15px;
+    font-family: "Inter";
+    padding: 5rem 11rem;
+}
+
+.navBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--clr-veryDarkBlue);
+    margin: 1rem;
+}
+
+.navBar a {
+    padding-right: 10px;
+}
+
+.navBar button {
+    background-color: white;
+    border: none;
+    display: none;
+}
+
+.navBar button img {
+    width: 100%;
+    height: 100%;
+}
+
+section {
+    display: grid;
+    grid-template-columns: 2fr 0.9fr;
+    grid-template-rows: 1fr;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+section article {
+    margin-right: 2rem;
+    grid-column: 1 / 2;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+}
+
+section img {
+    max-width: 100%;
+}
+
+.grid-group-1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: auto;
+    margin-top: auto;
+    justify-content: flex-end;
+}
+
+.grid-group-1 > h1 {
+    font-weight: 800;
+    font-size: 4rem;
+    padding-top: 2rem;
+    line-height: 63px;
+}
+
+.flex-group-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.flex-group-1 p {
+    color: var(--clr-grayishBlue);
+    line-height: 1.5rem;
+    padding-top: 2rem;
+}
+
+section button {
+    color: var(--clr-offWhite);
+    background-color: var(--clr-softRed);
+    width: 200px;
+    height: 50px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 700;
+    border: none;
+}
+
+section aside {
+    background-color: var(--clr-veryDarkBlue);
+    padding: 1.85rem;
+    grid-column: 2 / 3;
+}
+
+section aside h1 {
+    color: var(--clr-softOrange);
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+section aside h2 {
+    color: var(--clr-offWhite);
+    margin-bottom: 1rem;
+}
+
+section aside p {
+    border-bottom: 1px solid var(--clr-offWhite);
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    color: var(--clr-grayishBlue);
+}
+
+section aside p:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+summary {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 5rem;
+    width: 100%;
+    height: auto
+}
+
+summary article {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+}
+
+summary article img {
+    grid-column: 1 / 2;
+    width: auto;
+    height: 100%;
+    width: 100%;
+    padding-right: 20px;
+}
+
+.bottom-content {
+    grid-column: 2 / 4;
+
+}
+
+.bottom-content h2 {
+    color: var(--clr-grayishBlue);
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 0.3rem;
+}
+
+.bottom-content h3 {
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.bottom-content p {
+    color: var(--clr-grayishBlue);
+    line-height: 1.4rem;
+    font-weight: 400;
+    padding-right: 20px;
+}
+
+@media screen and (max-width: 575px) {
+    body {
+        padding: 1rem;
+    }
+
+    body.hidden {
+        overflow: hidden;
+        background-color: gray
+    }
+
+    #navBar-content {
+        display: none;
+    }
+
+    #navBar-content.hidden {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        padding: 2.4rem 5rem 5rem 1rem;
+        gap: 1.5rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        border: 1px solid black;
+        background-color: white;
+    }
+
+    .navBar button {
+        display: block;
+        max-width: 40px;
+        max-height: 20px;
+        z-index: 3;
+    }
+
+    #menu {
+        display: flex;
+    }
+    
+    #menu.hidden {
+        z-index: 2;
+        position: fixed;
+    }
+
+    section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .grid-group-1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .flex-group-1 button {
+        margin-top: 2rem;
+    }
+    
+    summary {
+        flex-direction: column;
+    }
+
+    summary article {
+        margin-bottom: 2rem;
+    }
+}
