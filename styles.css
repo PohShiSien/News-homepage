@@ -185,7 +185,7 @@ summary article img {
 
     body.hidden {
         overflow: hidden;
-        background-color: gray
+        background-color: gray;
     }
 
     #navBar-content {

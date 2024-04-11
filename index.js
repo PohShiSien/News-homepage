@@ -6,10 +6,10 @@ function toggleNavbar() {
     body.classList.toggle("hidden");
     navBar.classList.toggle("hidden");
     let img = button.querySelector("img");
-    if (img.getAttribute("src") === "news-homepage-main/assets/images/icon-menu.svg") {
-        img.src = "news-homepage-main/assets/images/icon-menu-close.svg"
+    if (img.getAttribute("src") === "images/icon-menu.svg") {
+        img.src = "images/icon-menu-close.svg"
     } else {
-        img.src = "news-homepage-main/assets/images/icon-menu.svg"
+        img.src = "images/icon-menu.svg"
     };
 }
 
